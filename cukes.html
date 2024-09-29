@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no, apple-mobile-web-app-capable=yes">
+    <link rel="stylesheet" href="css/cukes_main.css"><link rel="stylesheet" href="css/preloader.css">
+    <link rel="stylesheet" href="css/font.css"><link rel="stylesheet" href="css/adaptiv.css">
+    <script src="libs/gsap/gsap.min.js" ></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" ></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+    <section class="start__section">
+        <div class="start__box">
+            <img src="img/photo-main.png" alt="" class="start_photo">
+            <h3 class="start-h3">Используя данный сайт, вы даете согласие на использование файлов cookie, помогающих нам сделать его удобнее для вас.</h3>
+                <div class="button__div-start">
+                    <button class="crest__start_button " onclick="start_button()">
+                        <svg class="start_crest" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg" >
+                        <path d="M28 3.16016L3 28.1602" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 3.16016L28 28.1602" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        </button>
+                    <button class="arrow__start_button " onclick="start_button()">
+                        <svg width="37" height="30" viewBox="0 0 37 30" fill="none" xmlns="http://www.w3.org/2000/svg" class="start_arrow"> 
+                            <path d="M36.4142 16.4142C37.1953 15.6332 37.1953 14.3668 36.4142 13.5858L23.6863 0.857864C22.9052 0.0768156 21.6389 0.0768156 20.8579 0.857864C20.0768 1.63891 20.0768 2.90524 20.8579 3.68629L32.1716 15L20.8579 26.3137C20.0768 27.0948 20.0768 28.3611 20.8579 29.1421C21.6389 29.9232 22.9052 29.9232 23.6863 29.1421L36.4142 16.4142ZM0 17L35 17V13L0 13L0 17Z" fill="white"/>
+                            </svg>
+                            </button>
+                </div>
+    
+        </div>
+        <div class="wheel">
+            <div class="wheel__word">
+              <div class="wheel__letter">И</div>
+              <div class="wheel__letter">С</div>
+              <div class="wheel__letter">П</div>
+              <div class="wheel__letter">О</div>
+              <div class="wheel__letter">Л</div>
+              <div class="wheel__letter">ь</div>
+              <div class="wheel__letter">З</div>
+              <div class="wheel__letter">У</div>
+              <div class="wheel__letter">Е</div>
+              <div class="wheel__letter">М</div>
+              <div class="wheel__letter fake"></div>
+              <div class="wheel__letter">Ф</div>
+              <div class="wheel__letter">А</div>
+              <div class="wheel__letter">Й</div>
+              <div class="wheel__letter">Л</div>
+              <div class="wheel__letter">Ы</div>
+              <div class="wheel__letter fake"></div>
+              <div class="wheel__letter">К</div>
+              <div class="wheel__letter">У</div>
+              <div class="wheel__letter">К</div>
+              <div class="wheel__letter">И</div>
+
+            </div>
+            <div class="wheel__word">
+                <div class="wheel__letter">И</div>
+                <div class="wheel__letter">С</div>
+                <div class="wheel__letter">П</div>
+                <div class="wheel__letter">О</div>
+                <div class="wheel__letter">Л</div>
+                <div class="wheel__letter">ь</div>
+                <div class="wheel__letter">З</div>
+                <div class="wheel__letter">У</div>
+                <div class="wheel__letter">Е</div>
+                <div class="wheel__letter">М</div>
+                <div class="wheel__letter fake"></div>
+                <div class="wheel__letter">Ф</div>
+                <div class="wheel__letter">А</div>
+                <div class="wheel__letter">Й</div>
+                <div class="wheel__letter">Л</div>
+                <div class="wheel__letter">Ы</div>
+                <div class="wheel__letter fake"></div>
+                <div class="wheel__letter">К</div>
+                <div class="wheel__letter">У</div>
+                <div class="wheel__letter">К</div>
+                <div class="wheel__letter">И</div>
+
+
+  
+              </div>
+          
+          </div>
+    </section>
+    
+    <section class="section__video-main">
+        <video  autoplay muted id="video">
+            <source src="img/video/video.mp4" type="video/mp4">
+            <source src="img/video/video.webm" type="video/webm">
+             Ваш браузер не поддерживает встроенные видео :(
+        </video>
+        <button class="start__button-arrow" onclick="START()"><img src="img/Arrow_start.png" alt="" class="start__img-arrow"></button>
+        <div class="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+    <script src="js/start.js"></script>
+</body>
+</html>
