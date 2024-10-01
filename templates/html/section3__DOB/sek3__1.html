@@ -78,14 +78,14 @@
     <div class="wrapper ">
 		<div class="content ">
             <section class="page2__section2">
-                <h1 class="page2-h1">МЕРОПРИЯТИЯ ПОД КЛЮЧ 1</h1>
-                <p class="page2-p">Масштабные корпоративные летние выезды, массовые городские мероприятия, презентации новых продуктов, выпускные вечера, спортивные события, профессиональные премии, церемонии вручения, свадебные торжества</p>
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
-                <img src="{% static 'img__page/ph.png' %}" alt="" >
+                <h1 class="page2-h1">{{ gallery.title }}</h1>
+                <p class="page2-p">{{ gallery.description }}</p>
+                {% for image in gallery.images.all %}
+                    <img src="{{ image.image.url }}" alt="Image {{ forloop.counter }}">
+                    {% if image.video_url %}
+                    <video src="{{ image.video_url }}" controls></video>
+                    {% endif %}
+                {% endfor %}
                 <a href="{% url 'sek3__2' %}" class="page2-a">ПЕРЕЙТИ НА 2 ГАЛЕРЕЮ</a>
             </section>
         </div>

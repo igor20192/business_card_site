@@ -144,43 +144,22 @@
             </section>
             <div class="vremenno">
                 <div class="swiper-container">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="Block1__swiper">
-                        <img src="{% static 'img/lol.jpg' %}" alt="" class="lol">
-                        <p class="rok">1989</p>
-                        <p class="normal">Я родился в 1989 году в городе, которого нет и в стране, которой уже не существует. Это город Горький, который в 1990 был переименован обратно в Нижний Новгород.</p>
-                      </div>
+                    <div class="swiper-wrapper">
+                        {% for event in events %}
+                        <div class="swiper-slide">
+                            <div class="Block1__swiper">
+                                <img src="{{ event.image.url }}" alt="" class="lol">
+                                <p class="rok">{{ event.year }}</p>
+                                <p class="normal">{{ event.text }}</p>
+                                
+                            </div>
+                        </div>
+                        {% endfor %}
                     </div>
-              
-                    <div class="swiper-slide">
-                      <div class="Block1__swiper">
-                        <img src="{% static 'img/lol.jpg' %}" alt="" class="lol">
-                        <p class="rok">1990</p>
-                        <p class="normal">Детство мое прошло в 90-е годы. На улицах было, мягко говоря, не спокойно, поэтому родители отдали нас с братом в спорт. Учился я хорошо, хотя нередко хулиганил, за что получал от родителей дома.</p>
-                      </div>
-                    </div>
-              
-                    <div class="swiper-slide">
-                      <div class="Block1__swiper">
-                        <img src="{% static 'img/lol.jpg' %}" alt="" class="lol">
-                        <p class="rok">1991</p>
-                        <p class="big">В школе я занимался в «творческой гостиной», так называлось место, где собирались по желанию те учащиеся, которые хотели участвовать в творческой жизни школы. На протяжении всей учебы в школе я был активным участником «творческой гостиной». Участвовал в театральных постановках, нередко помогал с с костюмами, с реквизитом. С некоторыми спектаклями мы ездили на фестивали и даже получали награды. Кроме того меня обычно от школы отправляли на конкурсы чтецов. Мне очень нравилась эта часть моей жизни. При этом я продолжал хорошо учиться и по другим предметам.</p>
-                      </div>
-                    </div>
-              
-
-                    <div class="swiper-slide">
-                      <div class="Block1__swiper">
-                        <img src="{% static 'img/lol.jpg' %}" alt="" class="lol">
-                        <p class="rok">1992</p>
-                        <p class="big">После окончания школы я поступил сразу в два института - в строительный и в институт водного транспорта. В итоге я выбрал водный институт, идя по стопам отца, который работал на судо-строительном заводе. В институте я принимал активное участие в творческих и спортивных мероприятиях. На третьем курсе института я начал танцевать в шоу-балете и гастролировать по городам с выступлениями. Тогда я понял, что электромеханика это все же не то, чем я хочу заниматься в жизни.</p>
-                      </div>
-                    </div>
-                  </div>
-              
                 </div>
+                
             </div>
+            
             <div class="Dob-adaptiv" style="height: 15vh;width: 100%;background-color: black;position: relative;top:-.1vh;"></div>
             <div class="FAKE__SECTION3"></div>
             <section class="section__block-3">
