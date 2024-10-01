@@ -81,9 +81,11 @@
                 <h1 class="page2-h1">{{ gallery.title }}</h1>
                 <p class="page2-p">{{ gallery.description }}</p>
                 {% for image in gallery.images.all %}
+                    {% if image.image %}
                     <img src="{{ image.image.url }}" alt="Image {{ forloop.counter }}">
+                    {% endif %}
                     {% if image.video_url %}
-                    <video src="{{ image.video_url }}" controls></video>
+                    <video src="{{ image.video_url.url }}" controls></video>
                     {% endif %}
                 {% endfor %}
                 <a href="{% url 'sek3__1' %}" class="page2-a">ПЕРЕЙТИ НА 1 ГАЛЕРЕЮ</a>
