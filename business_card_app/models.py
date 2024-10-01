@@ -53,9 +53,11 @@ class Gallery5(BaseGallery):
 
 
 class GalleryImage(models.Model):
-    image = models.ImageField(upload_to="gallery_images/", verbose_name="Изображение")
+    image = models.ImageField(
+        upload_to="gallery_images/", verbose_name="Изображение", blank=True, null=True
+    )
     video_url = models.FileField(
-        upload_to="videos/", blank=True, null=True, verbose_name="URL видео"
+        upload_to="videos/", blank=True, null=True, verbose_name="Видео"
     )
 
     def __str__(self):
