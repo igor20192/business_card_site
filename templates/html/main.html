@@ -14,7 +14,7 @@
     <script src="{% static 'libs/gsap/ScrollTrigger.min.js' %}" ></script>
     <script src="{% static 'libs/gsap/ScrollSmoother.min.js' %}" ></script>
    
-    <title>ВЕДУЩИЙ БЕЗ РАЗВОДОВ</title>
+    <title>ПРОФЕССИОНАЛЬНЫЙ ВЕДУЩИЙ ЕВГЕНИЙ КОЖУХОВ</title>
 </head>
 <body>
     <header class="header-osnova">
@@ -75,6 +75,19 @@
         <a href="@evgeny_kozhukhov">telegram</a>
         <a href="https://vk.com/evgenykozhukhov">vk</a>
     </div>
+    <div class="COSTILBLACK"></div>
+    <div class="DIV-VIDEO">
+        <video id="videoo" playsinline>
+            <source src="{% static 'img/video/video.mp4' %}" type="video/mp4">
+            <source src="{% static 'img/video/video.webm' %}" type="video/webm">
+            Ваш браузер не поддерживает встроенные видео :(
+        </video>
+        <img src="{% static 'img/crest.png' %}" alt="" class="crestVideo" onclick="EndVideo()">
+        <div id="muteButton" onclick="toggleMute()">
+            <img src="{% static 'img/sound.png' %}" alt="" class="VKL">
+            <img src="{% static 'img/volume.png' %}" alt="" class="OFF">
+        </div>
+    </div>
     <div class="wrapper ">
 		<div class="content ">
             
@@ -91,6 +104,10 @@
                 </div>
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa1">
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa2">
+                <div class="div__go-video" onclick="PlayVideo()"></div>
+                    <img src="{% static 'img/playVideoForm.png' %}" alt="" class="play-form">
+                    <img src="{% static 'img/Vector.png' %}" alt="" class="play-button">
+                </div>
             </section>
 
             <section class="section__block-2">
@@ -179,10 +196,10 @@
                         </div></a>
                     </div>
                     <div class="imgBlock3__div-3">
-                        <a target="_blank" href="{% url 'sek3__3' %}" class="a3"><img src="{% static 'img/imgBlock3-1.png' %}" alt="" class="imgBlock3__img blImg3">
+                        <a target="_blank" href="{% url 'sek3__3' %}" class="a3"><img src="{{ eventblock.image.url }}" alt="" class="imgBlock3__img blImg3">
                         <div class="Block3__div_h5-3">
-                            <h5 class="Block3__h5">МЕРОПРИЯТИЯ <br>ПОД КЛЮЧ</h5>
-                            <p class="Block3__p">поиск площадки<br> -составление сценария мероприятия<br>-приглашение и привоз артистов<br>-заключение договоров</p>
+                            <h5 class="Block3__h5">{{ eventblock.title|safe }}</h5>
+                            <p class="Block3__p">{{ eventblock.description|safe }}</p>
                         </div></a>
                     </div>
                     <div class="imgBlock3__div-4">
@@ -221,7 +238,7 @@
                         <h2 class="h2-num">ВЫПУСКНЫЕ ВЕЧЕРА</h2>
                         <img src="{% static 'img/Arrow_bk3.png' %}" alt="" class="arrow__bk3 arrow__bk3-right">
                     </div>
-                    <div class="but-num">ПОСМОТРЕТЬ</div>
+                    <div class="but-num" data-event={{ eventblock.title_mobile|safe }} data-urls='["{% url "sek3__1" %}", "{% url "sek3__2" %}", "{% url "sek3__3" %}", "{% url "sek3__4" %}", "{% url "sek3__5" %}"]'>ПОСМОТРЕТЬ</div>
                 </div>
             </section>
             <div class="Dob-adaptiv" style="height: 15vh;width: 100%;background-color: black;position: relative;top:-.3vh;"></div>
