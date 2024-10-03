@@ -157,31 +157,34 @@ ScrollTrigger.matchMedia({
         
             const button = document.querySelector('.but-num');
             const h2Num = document.querySelector('.h2-num');
+
+            const urls = JSON.parse(button.getAttribute('data-urls'));
+            const name=button.getAttribute('data-event');
         
             switch (activeIndex) {
                 case 1:
                     h2Num.textContent = "СВАДЬБЫ";
-                    button.onclick = () => window.open('../html/section3__DOB/sek3__1.html', '_blank');
+                    button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: 0 });
                     break;
                 case 2:
                     h2Num.textContent = "SOHO ROOMS";
-                    button.onclick = () => window.open('../html/section3__DOB/sek3__2.html', '_blank');
+                    button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: -1.5 });
                     break;
                 case 3:
-                    h2Num.textContent = "EVENT";
-                    button.onclick = () => window.open('../html/section3__DOB/sek3__3.html', '_blank');
+                    h2Num.textContent = name;
+                    button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: -3 });
                     break;
                 case 4:
                     h2Num.textContent = "ВЫПУСКНЫЕ ВЕЧЕРА";
-                    button.onclick = () => window.open('../html/section3__DOB/sek3__4.html', '_blank');
+                    button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: -4.5 });
                     break;
                 case 5:
                     h2Num.textContent = "О ПОДХОДЕ";
-                    button.onclick = () => window.open('../html/section3__DOB/sek3__5.html', '_blank');
+                    button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: -6 });
                     break;
             }

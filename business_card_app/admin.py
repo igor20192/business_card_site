@@ -2,6 +2,7 @@ from django.contrib import admin
 from .models import (
     BiographyEvent,
     Contact,
+    EventBlock,
     Footer,
     Gallery1,
     Gallery2,
@@ -61,3 +62,8 @@ class BiographyEventAdmin(admin.ModelAdmin):
     )  # Поля, которые будут отображаться в списке
     search_fields = ("year", "text")  # Поля, по которым можно искать
     list_filter = ("year",)  # Фильтрация по году
+
+
+@admin.register(EventBlock)
+class EventBlockAdmin(admin.ModelAdmin):
+    list_display = ["title"]

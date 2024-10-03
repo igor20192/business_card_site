@@ -4,6 +4,7 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView
 from .models import (
     Contact,
+    EventBlock,
     Footer,
     Gallery1,
     Gallery2,
@@ -53,6 +54,8 @@ class MainView(TemplateView):
 
             events = BiographyEvent.objects.all()
             context["events"] = events
+            context["eventblock"] = EventBlock.objects.first()
+
         except Footer.DoesNotExist as e:
             logger.error(f"Footer data not found: {e}")
             context["div_text"] = context["p1_text"] = context["p2_text"] = context[
