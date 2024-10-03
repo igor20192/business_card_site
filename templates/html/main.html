@@ -77,11 +77,17 @@
     </div>
     <div class="COSTILBLACK"></div>
     <div class="DIV-VIDEO">
+        {% for video in videos %}
         <video id="videoo" playsinline>
-            <source src="{% static 'img/video/video.mp4' %}" type="video/mp4">
-            <source src="{% static 'img/video/video.webm' %}" type="video/webm">
+            {% if video.video_mp4 %}
+            <source src="{{ video.video_mp4.url }}" type="video/mp4">
+            {% endif %}
+            {% if video.video_webm %}
+            <source src="{{ video.video_webm.url }}" type="video/webm">
+            {% endif %}
             Ваш браузер не поддерживает встроенные видео :(
         </video>
+        {% endfor %}
         <img src="{% static 'img/crest.png' %}" alt="" class="crestVideo" onclick="EndVideo()">
         <div id="muteButton" onclick="toggleMute()">
             <img src="{% static 'img/sound.png' %}" alt="" class="VKL">
@@ -104,7 +110,7 @@
                 </div>
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa1">
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa2">
-                <div class="div__go-video" onclick="PlayVideo()"></div>
+                <div class="div__go-video" onclick="PlayVideo()">
                     <img src="{% static 'img/playVideoForm.png' %}" alt="" class="play-form">
                     <img src="{% static 'img/Vector.png' %}" alt="" class="play-button">
                 </div>
