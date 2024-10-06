@@ -37,5 +37,57 @@ ScrollTrigger.matchMedia({
     }
   });
 
+  gsap.to(".play-form", {rotation: 7,yoyo: true,repeat: -1,  duration: 1,    ease: "power1.inOut",yoyoEase: true  });
+  document.querySelector('.div__go-video').addEventListener('mouseenter', () => {
+    gsap.to(".play-form", { duration: .3,scale:1.3});
+    gsap.to(".play-button", { duration: .3,scale:1.1});
+  });
 
- 
+  document.querySelector('.div__go-video').addEventListener('mouseleave', () => {
+    gsap.to(".play-form,.play-button", { duration: .5,scale:1});
+  });
+
+
+
+  const video = document.getElementById('videoo');
+  const muteButton = document.getElementById('muteButton');
+  const on = document.querySelector('.VKL');
+  const off = document.querySelector('.OFF');
+  video.addEventListener('ended', EndVideo);
+  function PlayVideo(){
+    document.querySelector(".DIV-VIDEO").style.display='flex';
+    gsap.to(".DIV-VIDEO", {opacity: 1,duration: .1,delay:.5});
+    gsap.to(".COSTILBLACK", {opacity: 1,duration: .5});
+    gsap.to(".COSTILBLACK", {opacity: 0,duration:1,delay:2});
+    setTimeout(() => {
+        document.documentElement.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
+        video.play();
+        document.querySelector('.header-osnova').style.display = 'none';
+    }, 500);
+  }
+  function EndVideo(){
+    gsap.to(".DIV-VIDEO", {opacity: 0,duration: .1,delay:.5});
+    gsap.to(".COSTILBLACK", {opacity: 1,duration: .5});
+    gsap.to(".COSTILBLACK", {opacity: 0,duration:1,delay:2});
+    setTimeout(() => {
+        document.documentElement.style.overflow = 'auto';
+        document.body.style.overflow = 'auto';
+        video.pause();
+        video.currentTime = 0;
+    }, 500);
+    setTimeout(() => {
+        document.querySelector(".DIV-VIDEO").style.display='none';
+        document.querySelector('.header-osnova').style.display = 'block';
+    }, 1000);
+  }
+  function toggleMute() {
+    video.muted = !video.muted;
+    if (video.muted) {
+        on.style.display = 'none';
+        off.style.display = 'block';
+    } else {
+        on.style.display = 'block';
+        off.style.display = 'none';
+    }
+}

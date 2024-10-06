@@ -12,7 +12,9 @@ class Footer(models.Model):
         p3_text (TextField): Text for the third 'p' (paragraph) element.
     """
 
-    div_text = models.TextField(verbose_name="Текст для div (block5-text)")
+    div_text = models.TextField(
+        verbose_name="Текст для div (block5-text)",
+    )
     p1_text = models.TextField(verbose_name="Текст для первого элемента p")
     p2_text = models.TextField(verbose_name="Текст для второго элемента p")
     p3_text = models.TextField(verbose_name="Текст для третьего элемента p")
@@ -148,6 +150,23 @@ class EventBlock(models.Model):
     )
     image = models.ImageField(
         upload_to="event_images/", verbose_name="Изображение (img)"
+    )
+
+    def __str__(self):
+        return self.title
+
+
+class Video(models.Model):
+    """
+    Model for storing videos for editing via the admin panel.
+    """
+
+    title = models.CharField(max_length=100, verbose_name="Название видео")
+    video_mp4 = models.FileField(
+        upload_to="videos/", verbose_name="Видео (MP4)", blank=True, null=True
+    )
+    video_webm = models.FileField(
+        upload_to="videos/", verbose_name="Видео (WEBM)", blank=True, null=True
     )
 
     def __str__(self):

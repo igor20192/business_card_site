@@ -10,6 +10,7 @@ from .models import (
     Gallery4,
     Gallery5,
     GalleryImage,
+    Video,
 )
 
 
@@ -66,4 +67,9 @@ class BiographyEventAdmin(admin.ModelAdmin):
 
 @admin.register(EventBlock)
 class EventBlockAdmin(admin.ModelAdmin):
+    list_display = ["title"]
+
+
+@admin.register(Video)
+class VideoAdmin(admin.ModelAdmin):
     list_display = ["title"]

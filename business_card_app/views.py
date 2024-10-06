@@ -12,6 +12,7 @@ from .models import (
     Gallery4,
     Gallery5,
     BiographyEvent,
+    Video,
 )
 
 # Настройка логирования
@@ -55,6 +56,7 @@ class MainView(TemplateView):
             events = BiographyEvent.objects.all()
             context["events"] = events
             context["eventblock"] = EventBlock.objects.first()
+            context["videos"] = Video.objects.all()
 
         except Footer.DoesNotExist as e:
             logger.error(f"Footer data not found: {e}")
@@ -95,7 +97,7 @@ class Section3View1(TemplateView):
         """
         context = super().get_context_data(**kwargs)
         try:
-            gallery = Gallery1.objects.first()
+            gallery = Gallery1.objects.prefetch_related("images").first()
             context["gallery"] = gallery
         except Gallery1.DoesNotExist as e:
             logger.error(f"Gallery1 data not found: {e}")
@@ -128,7 +130,7 @@ class Section3View2(TemplateView):
         """
         context = super().get_context_data(**kwargs)
         try:
-            gallery = Gallery2.objects.first()
+            gallery = Gallery2.objects.prefetch_related("images").first()
             context["gallery"] = gallery
         except Gallery2.DoesNotExist as e:
             logger.error(f"Gallery2 data not found: {e}")
@@ -161,7 +163,7 @@ class Section3View3(TemplateView):
         """
         context = super().get_context_data(**kwargs)
         try:
-            gallery = Gallery3.objects.first()
+            gallery = Gallery3.objects.prefetch_related("images").first()
             context["gallery"] = gallery
         except Gallery3.DoesNotExist as e:
             logger.error(f"Gallery3 data not found: {e}")
@@ -194,7 +196,7 @@ class Section3View4(TemplateView):
         """
         context = super().get_context_data(**kwargs)
         try:
-            gallery = Gallery4.objects.first()
+            gallery = Gallery4.objects.prefetch_related("images").first()
             context["gallery"] = gallery
         except Gallery4.DoesNotExist as e:
             logger.error(f"Gallery4 data not found: {e}")
@@ -227,7 +229,7 @@ class Section3View5(TemplateView):
         """
         context = super().get_context_data(**kwargs)
         try:
-            gallery = Gallery5.objects.first()
+            gallery = Gallery5.objects.prefetch_related("images").first()
             context["gallery"] = gallery
         except Gallery5.DoesNotExist as e:
             logger.error(f"Gallery5 data not found: {e}")
