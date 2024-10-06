@@ -1,9 +1,4 @@
 
-.env
-staticfiles
-.env.db
-env
-media
 # Django #
 *.log
 *.pot
