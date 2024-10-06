@@ -31,7 +31,7 @@ ScrollTrigger.matchMedia({
 
     gsap.fromTo('.imgBlock3__div-3', {width: "5%"}, {width: "70%",duration:.6,delay:.1, scrollTrigger: {trigger: '.imgBlock3__div-3', start: 305*vh,end:315*vh}});
     // gsap.fromTo('.imgBlock3__img', {height: "100%"}, {height: "110%",duration:.5,delay:.5, scrollTrigger: {trigger: '.imgBlock3__img', start: 305*vh,end:315*vh}});
-    gsap.to('.conteiner__block-3', {opacity:1,duration:.5, scrollTrigger: {trigger: '.conteiner__block-3', start: 305*vh,end:315*vh}});
+    gsap.to('.conteiner__block-3', {opacity:1,duration:10, scrollTrigger: {trigger: '.conteiner__block-3', start: 305*vh,end:315*vh}});
     gsap.fromTo('.FAKE__SECTION3', {height: "100vh"}, {height: "0vh",duration:.1,delay:1, scrollTrigger: {trigger: '.imgBlock3__img', start: 305*vh,end:315*vh}});
 
     }
@@ -60,8 +60,8 @@ ScrollTrigger.matchMedia({
     gsap.to(".COSTILBLACK", {opacity: 1,duration: .5});
     gsap.to(".COSTILBLACK", {opacity: 0,duration:1,delay:2});
     setTimeout(() => {
-        document.documentElement.style.overflow = 'hidden';
-        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflowY = 'hidden';
+        document.body.style.overflowY = 'hidden';
         video.play();
         document.querySelector('.header-osnova').style.display = 'none';
     }, 500);
@@ -71,8 +71,8 @@ ScrollTrigger.matchMedia({
     gsap.to(".COSTILBLACK", {opacity: 1,duration: .5});
     gsap.to(".COSTILBLACK", {opacity: 0,duration:1,delay:2});
     setTimeout(() => {
-        document.documentElement.style.overflow = 'auto';
-        document.body.style.overflow = 'auto';
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflowY = 'auto';
         video.pause();
         video.currentTime = 0;
     }, 500);
