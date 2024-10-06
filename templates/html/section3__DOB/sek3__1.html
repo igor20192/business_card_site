@@ -82,7 +82,7 @@
                 <p class="page2-p">{{ gallery.description }}</p> -->
                 {% for image in gallery.images.all %}
                     {% if image.image %}
-                    <img src="{{ image.image.url }}" alt="Image {{ forloop.counter }}" loading="lazy">
+                    <img src="{{ image.image.url }}" alt="Image {{ forloop.counter }}" >
                     {% endif %}
                     {% if image.video_url %}
                     <video src="{{ image.video_url.url }}" controls ></video>
