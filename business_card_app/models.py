@@ -51,8 +51,11 @@ class BaseGallery(models.Model):
         images (ManyToManyField): The images associated with the gallery.
     """
 
-    title = models.CharField(max_length=255, verbose_name="Заголовок")
-    description = models.TextField(verbose_name="Описание")
+    title = models.CharField(
+        max_length=255, verbose_name="Заголовок", default="Callery"
+    )
+
+    description = models.TextField(verbose_name="Описание", null=True, blank=True)
     images = models.ManyToManyField("GalleryImage", verbose_name="Изображения")
 
     class Meta:
