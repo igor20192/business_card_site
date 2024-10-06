@@ -14,7 +14,7 @@
     <script src="{% static 'libs/gsap/gsap.min.js' %}" ></script>
     <script src="{% static 'libs/gsap/ScrollTrigger.min.js' %}" ></script>
     <script src="{% static 'libs/gsap/ScrollSmoother.min.js' %}" ></script>
-    <title>Document</title>
+    <title>ГАЛЕРЕЯ 5</title>
 </head>
 <body>
     <header class="header-osnova">
@@ -78,8 +78,8 @@
     <div class="wrapper ">
 		<div class="content ">
             <section class="page2__section2">
-                <h1 class="page2-h1">{{ gallery.title }}</h1>
-                <p class="page2-p">{{ gallery.description }}</p>
+                <!-- <h1 class="page2-h1">{{ gallery.title }}</h1>
+                <p class="page2-p">{{ gallery.description }}</p> -->
                 {% for image in gallery.images.all %}
                     {% if image.image %}
                     <img src="{{ image.image.url }}" alt="Image {{ forloop.counter }}" loading="lazy">
