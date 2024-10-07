@@ -2,7 +2,7 @@ version: '3.9'
 
 services:
   web:
-    build: .
+    image: igor2022/business_card_site
     command: >
       bash -c "python manage.py makemigrations &&
               python manage.py migrate &&
