@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no, apple-mobile-web-app-capable=yes">
@@ -17,6 +17,9 @@
     <title>ПРОФЕССИОНАЛЬНЫЙ ВЕДУЩИЙ ЕВГЕНИЙ КОЖУХОВ</title>
 </head>
 <body>
+    <div class="MAC-safari">
+        К сожалению, данный сайт не поддерживается в браузере Safari. Пожалуйста, откройте его в другом браузере для корректного отображения и работы.
+    </div>
     <header class="header-osnova">
         <div class="header__osnova_items">
             <a href="{% url 'home' %}">
@@ -32,7 +35,8 @@
                     </h2>
                 </div>
             </div></a>
-            <div class="header__osnova_item header__adaptiv-none">
+            
+            <div class="header__osnova_item header__adaptiv-none div__Mac-num">
                 <div class="effect-up">
                     <a href="tel:+79015311244"><h6 class="header__osnova-number">
                         +79015311244
@@ -43,6 +47,11 @@
                 </div>  
 
             </div>
+            <div class="header__osnova_item-MAC header__adaptiv-none">
+                    <a href="tel:+79015311244"><h6 class="header__osnova-number-MAC">
+                        +79015311244
+                    </h6></a>
+            </div>
             <div class="header__osnova_item header__adaptiv-none">
                 <div class="header__soz">
                         <a target="_blank" href="https://vk.com/evgenykozhukhov"><img src="{% static 'img/vkH.png' %}" alt="" class="H__img-vk"></a>
@@ -50,7 +59,7 @@
                         <a target="_blank" href="https://www.instagram.com/evgeny_kozhukhov_"><img src="{% static 'img/instH.png' %}" alt="" class="H__img-inst"></a>
                 </div>
             </div>
-            <div class="header__osnova_item header-last header__adaptiv-none">
+            <div class="header__osnova_item header-last header__adaptiv-none div__Mac-text">
                 <div class="inviseble_div1">
                     <h6 class="header__osnova-text header-text-1">
                         Мероприятие любой сложности
@@ -63,6 +72,11 @@
                 </div>
                 
             </div>
+            <div class="header-last header__adaptiv-none header__osnova_item-MAC-t">
+                    <h6 class="header__osnova-text-MAC">
+                        Мероприятие любой сложности <br> в любой точке
+                    </h6>      
+            </div>
             <div class="burger-menu">
                 <div class="bar bar1"></div>
                 <div class="bar bar2"></div>
@@ -72,7 +86,7 @@
     <div class="black__Header-adaptiv">
         <a href="tel:+79015311244">+79015311244</a>
         <a href="https://www.instagram.com/evgeny_kozhukhov_">instagram</a>
-        <a href="https://t.me/evgeny_kozhukhov"">telegram</a>
+        <a href="https://t.me/evgeny_kozhukhov">telegram</a>
         <a href="https://vk.com/evgenykozhukhov">vk</a>
     </div>
     <div class="COSTILBLACK"></div>
@@ -96,17 +110,16 @@
     </div>
     <div class="wrapper ">
 		<div class="content ">
-            
             <section class="section__block-1">
                 <img src="{% static 'img/glava.png' %}" alt="" class="glava-1">
                 <div class="text-osnova">ВЕДУЩИЙ</div>
                 
                 <div class="section__blocks-img">
-                    <img src="{% static 'img/img1.png' %}" alt="" class="img1" >
-                    <img src="{% static 'img/img2.png' %}" alt="" class="img2">
-                    <img src="{% static 'img/img3.png' %}" alt="" class="img3">
-                    <img src="{% static 'img/img4.png' %}" alt="" class="img4">
-                    <img src="{% static 'img/img5.png' %}" alt="" class="img5">
+                    <img src="{% static 'img/img11.jpg' %}" alt="" class="img1" >
+                    <img src="{% static 'img/img22.jpg' %}" alt="" class="img2">
+                    <img src="{% static 'img/img33.jpg' %}" alt="" class="img3">
+                    <img src="{% static 'img/img44.jpg' %}" alt="" class="img4">
+                    <img src="{% static 'img/img55.jpg' %}" alt="" class="img5">
                 </div>
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa1">
                 <img src="{% static 'img/polosa1.png' %}" alt="" class="polosa2">
@@ -120,42 +133,43 @@
                 <div class="conteiner__block-2">
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-1">
+                            <img src="{% static 'img/block2/111.jpg' %}" alt="" class="block__2_img i0">
                             <h6 class="block__2_h6">ЕВГЕНИЙ КОЖУХОВ</h6>
-                            <img src="{% static 'img/img0.png' %}" alt="" class="block__2_img i1">
+                            <img src="{% static 'img/block2/222.jpg' %}" alt="" class="block__2_img i1">
                         </div>
                     </div>
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-2">
                             <h6 class="block__2_h6">&lt;&lt;ДЖЕКСОН&gt;&gt;</h6>
-                            <img src="{% static 'img/img1.png' %}" alt="" class="block__2_img i2">
+                            <img src="{% static 'img/block2/333.jpg' %}" alt="" class="block__2_img i2">
                             <h6 class="block__2_h6">ОПЫТНЫЙ</h6>
                         </div>
                     </div>
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-3">
-                            <img src="{% static 'img/img2.png' %}" alt="" class="block__2_img i3">
                             <h6 class="block__2_h6">ВЕДУЩИЙ НА РУССКОМ</h6>
+                            <img src="{% static 'img/block2/444.jpg' %}" alt="" class="block__2_img i3">
                         </div>
                     </div>
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-4">
                             <h6 class="block__2_h6">И АНГЛИЙСКОМ</h6>
-                            <img src="{% static 'img/img3.png' %}" alt="" class="block__2_img i4">
+                            <img src="{% static 'img/block2/555.jpg' %}" alt="" class="block__2_img i4">
                             <h6 class="block__2_h6">ЯЗЫКАХ</h6>
                         </div>
                     </div>
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-5">
                             <h6 class="block__2_h6">15 ЛЕТ В</h6>
-                            <img src="{% static 'img/img4.png' %}" alt="" class="block__2_img i5">
+                            <img src="{% static 'img/block2/666.jpg' %}" alt="" class="block__2_img i5">
                             <h6 class="block__2_h6">ИНДУСТРИИ</h6>
                         </div>
                     </div>
                     <div class="inviseble_div-block2">
                         <div class="no_div-block2-6">
-                            <img src="{% static 'img/img5.png' %}" alt="" class="block__2_img i6">
+                            <img src="{% static 'img/block2/777.jpg' %}" alt="" class="block__2_img i6">
                             <h6 class="block__2_h6">МЕРОПРИЯТИЙ</h6>
-                            <img src="{% static 'img/img5.png' %}" alt="" class="block__2_img i7">
+                            <img src="{% static 'img/block2/888.jpg' %}" alt="" class="block__2_img i7">
                         </div>
                     </div>
                 </div>
@@ -308,15 +322,15 @@
                         <div class="info__footer">
                             <div class="info-1">
                             <span>1</span>
-                            <p class="Informazion-info">{{ p1_text }}</p>  
+                            <p class="Informazion-info">{{ p1_text|linebreaksbr }}</p>  
                             </div>
                             <div class="info-2">
                             <span>2</span>
-                            <p class="Informazion-info">{{ p2_text }}</p>   
+                            <p class="Informazion-info">{{ p2_text|linebreaksbr }}</p>   
                             </div>
                             <div class="info-3">
                             <span>3</span>
-                            <p class="Informazion-info">{{ p3_text }}</p>
+                            <p class="Informazion-info">{{ p3_text|linebreaksbr }}</p>
                             </div>
                         </div>
 
