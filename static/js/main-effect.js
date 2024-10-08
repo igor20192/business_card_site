@@ -145,12 +145,11 @@ ScrollTrigger.matchMedia({
         gsap.fromTo(".imgBlock4-9", {rotate: "0deg"}, {rotate: "180deg", scrollTrigger: {trigger: '.item__block4-1', start: 280*vhh,end:640*vhh, scrub: true}});
 
         // 5 PHOTO-------------------------------------
-        
         let activeIndex = 3;
         const allDivs = [1, 2, 3, 4, 5];
         const updateLayout = (index) => {
             activeIndex = index;
-            gsap.to(`.imgBlock3__div-${activeIndex}`, { duration: 0.5, width: "70%", opacity: 1 });
+            gsap.to(`.imgBlock3__div-${activeIndex}`, { duration: 0.5, width: "100%", opacity: 1 });
             gsap.to(`.imgBlock3__div-${activeIndex - 1}, .imgBlock3__div-${activeIndex + 1}`, { duration: 0.5, width: "10%", opacity: 0.2 });
             gsap.to(allDivs.filter(i => i !== activeIndex && i !== activeIndex - 1 && i !== activeIndex + 1)
               .map(i => `.imgBlock3__div-${i}`), { duration: 0.5, width: "0%", opacity: 0 });
@@ -183,7 +182,7 @@ ScrollTrigger.matchMedia({
                     gsap.to(".div__number", { duration: 0.5, top: -4.5 });
                     break;
                 case 5:
-                    h2Num.textContent = "О ПОДХОДЕ";
+                    h2Num.textContent = "НОВЫЙ ГОД";
                     button.onclick = () => window.open(urls[activeIndex-1], '_blank');
                     gsap.to(".div__number", { duration: 0.5, top: -6 });
                     break;
@@ -281,7 +280,7 @@ document.querySelector('.imgBlock3__div-5').addEventListener('mouseenter', () =>
 
 
         // Block__2_img--------------------------------------------------
-        const elements = ['.i1', '.i2', '.i3', '.i4', '.i5', '.i6', '.i7'];
+        const elements = ['.i0','.i1', '.i2', '.i3', '.i4', '.i5', '.i6', '.i7'];
 
         elements.forEach(selector => {
         const element = document.querySelector(selector);

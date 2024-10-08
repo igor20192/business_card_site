@@ -1,3 +1,6 @@
+if (navigator.userAgent.indexOf('Macintosh') !== -1) {
+    document.body.classList.add('mac');
+}
 gsap.fromTo('.text-osnova',{opacity:1,scale:1},{scale:1.25,opacity:0,scrollTrigger:{trigger:'.text-osnova',start: 0*vh,end:100*vh,scrub:true}})
 ScrollTrigger.matchMedia({
     "(max-width: 769px)": function() {
@@ -13,7 +16,7 @@ ScrollTrigger.matchMedia({
       });
 
       gsap.fromTo('.imgBlock3__div-3', {width: "5%"}, {width: "70%",duration:.6, scrollTrigger: {trigger: '.imgBlock3__div-3', start: 145*vh,end:155*vh}});
-      gsap.fromTo('.imgBlock3__img', {height: "100%"}, {height: "110%",duration:.5,delay:.5, scrollTrigger: {trigger: '.imgBlock3__img', start: 145*vh,end:155*vh}});
+      gsap.fromTo('.imgBlock3__img', {height: "100%"}, {height: "100%",duration:.5,delay:.5, scrollTrigger: {trigger: '.imgBlock3__img', start: 145*vh,end:155*vh}});
       gsap.to('.conteiner__block-3', {opacity:1,duration:.5, scrollTrigger: {trigger: '.conteiner__block-3', start: 145*vh,end:155*vh}});
       gsap.fromTo('.FAKE__SECTION3', {height: "100vh"}, {height: "0vh",duration:.1,delay:1, scrollTrigger: {trigger: '.imgBlock3__img', start: 145*vh,end:155*vh}});
     },
@@ -90,4 +93,19 @@ ScrollTrigger.matchMedia({
         on.style.display = 'block';
         off.style.display = 'none';
     }
+}
+if (navigator.platform.toLowerCase().includes('mac') && navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')) {
+    document.querySelector(".MAC-safari").style.display='flex';
+}
+if (document.body.classList.contains('mac')) {
+    document.querySelector(".header__osnova_item-MAC").style.display='block';
+    document.querySelector(".header__osnova_item-MAC-t").style.display='block';
+    const elements = document.querySelectorAll(".div__Mac-num, .div__Mac-text,.never,.div__numbers");
+    elements.forEach(element => {
+        element.style.display = 'none';
+    });
+
+    
+    gsap.to('.header__osnova_item-MAC', {duration: 1,opacity: 1,delay:1});
+    gsap.to('.header__osnova_item-MAC-t', {duration: 1,opacity: 1,delay:1});
 }

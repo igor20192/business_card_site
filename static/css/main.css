@@ -2,9 +2,6 @@ body{background-color:#000;font-family: 'Cygre', sans-serif;color: #fff; overflo
 :root{--index:calc(1vw + 1vh);--red:#aa0000;--grean:#39A845;}
 ::selection {background: var(--red);}::-moz-selection {background:var(--red);}
 *{margin: 0;padding: 0;box-shadow: none;}
-::-webkit-scrollbar {
-    width: 20vw;
-}
 a{
     text-decoration: none;
 }
@@ -29,7 +26,17 @@ html, body {
     scrollbar-width: thin;
     scrollbar-color: #444 #1e1e1e;
 }
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
 
+@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+    }
+}
 /* HEADER-------------------------- */
 .header__osnova_items a{
     color: #fff;
@@ -76,7 +83,6 @@ html, body {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    top: calc(var(--index)*-.3);
     width: calc(var(--index)*5);
     margin-left:5vw;
     opacity:0;
@@ -397,7 +403,7 @@ html, body {
     width: 6vw;
     margin: 0 calc(var(--index)*2);
 }
-.i3,.i6{
+.i0,.i6{
     margin-left:0;
 }
 .no_div-block2-3 img,.no_div-block2-6 img{
@@ -675,6 +681,7 @@ html, body {
     font-size: calc(var(--index)*2);
     font-family: 'Cygre-Black', sans-serif;
     width:calc(var(--index)*30);
+    line-height:calc(var(--index)*2);
 }
 .block5__items-soz {
     display: flex;
@@ -850,4 +857,44 @@ input:focus,textarea:focus{
     font-family: 'Cygre-Black', sans-serif;
     font-size: 1.5vw!important;
     margin-top:40px!important;
+  }
+  
+
+  /* MAC */
+  .header__osnova_item-MAC{
+    font-size:calc(var(--index)*1);
+    font-family: 'Cygre-Black', sans-serif;
+    margin-left: 14vw;
+    opacity: 0;
+    display: none;
+  }
+.header__osnova_item-MAC,.header__osnova_item-MAC-t{
+    display: none;
+  }
+  
+  .header__osnova_item-MAC-t{
+    width: 100%;
+    text-align: end;
+    font-size:calc(var(--index)*1);
+    opacity: 0;
+    font-family: 'Cygre-Black', sans-serif;
+  }
+  .div__Mac-num.mac,.div__Mac-text.mac{
+    display:none;
+  }
+  .header__osnova_item-MAC.mac,.header__osnova_item-MAC-t.mac{
+    display: block;
+  }
+  .MAC-safari{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999999999999999;
+    text-align: center;
+    display: none;
   }
